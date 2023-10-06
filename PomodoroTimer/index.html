@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="./css/timer-css/timer.css">
+  <link rel="stylesheet" href="./css/alarm-css/alarm.css">
+  <link rel="shortcut icon" href="./img/tomato.png" type="image/png">
+  <script src="./js/timer.js" defer></script>
+  <script src="./js/countdown.js" defer></script>
+</head>
+<body>
+  <div id="options-area">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="42" viewBox="0 0 34 42" fill="none" id="alarm-icon" onclick="toggleOptionsButtons()">
+      <path d="M0.333252 35.5834V31.4167H4.49992V16.8334C4.49992 13.9514 5.36797 11.3906 7.10408 9.15106C8.8402 6.91148 11.0971 5.44447 13.8749 4.75002V3.29169C13.8749 2.42363 14.1787 1.68578 14.7864 1.07815C15.394 0.470506 16.1319 0.166687 16.9999 0.166687C17.868 0.166687 18.6058 0.470506 19.2135 1.07815C19.8211 1.68578 20.1249 2.42363 20.1249 3.29169V4.75002C22.9027 5.44447 25.1596 6.91148 26.8958 9.15106C28.6319 11.3906 29.4999 13.9514 29.4999 16.8334V31.4167H33.6666V35.5834H0.333252ZM16.9999 41.8334C15.8541 41.8334 14.8732 41.4254 14.0572 40.6094C13.2412 39.7934 12.8333 38.8125 12.8333 37.6667H21.1666C21.1666 38.8125 20.7586 39.7934 19.9426 40.6094C19.1267 41.4254 18.1458 41.8334 16.9999 41.8334ZM8.66658 31.4167H25.3333V16.8334C25.3333 14.5417 24.5173 12.5799 22.8853 10.9479C21.2534 9.31599 19.2916 8.50002 16.9999 8.50002C14.7083 8.50002 12.7464 9.31599 11.1145 10.9479C9.48256 12.5799 8.66658 14.5417 8.66658 16.8334V31.4167Z" fill="white"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" id="close-icon" onclick="toggleOptionsButtons()">
+      <path d="M3.33341 29.5834L0.416748 26.6667L12.0834 15L0.416748 3.33335L3.33341 0.416687L15.0001 12.0834L26.6667 0.416687L29.5834 3.33335L17.9167 15L29.5834 26.6667L26.6667 29.5834L15.0001 17.9167L3.33341 29.5834Z" fill="white"/>
+    </svg>
+  </div>
+  <div id="timer">
+    <div id="content-timer">
+      <p id="time">00 : 00</p>
+      <div id="manage-time">
+        <svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="0 0 83 83" fill="none" id="reduce-time">
+          <circle cx="41.2281" cy="41.2281" r="38.7281" stroke="white" stroke-width="5"/>
+          <path d="M17.5439 41.2281L64.9123 41.2281" stroke="white" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="83" height="83" viewBox="0 0 83 83" fill="none" id="increase-time">
+          <circle cx="41.772" cy="41.2281" r="38.7281" stroke="white" stroke-width="5"/>
+          <path d="M18.0877 41.2281L65.4562 41.2281" stroke="white" stroke-width="5" stroke-linecap="round"/>
+          <path d="M41.7719 64.9123V17.5439" stroke="white" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <button id="start-stop-button">Start</button>
+      <p id="cancel-reset-button">Reset</p>
+    </div>
+  </div>
+  <div id="alarms-popup" style="display: none;">
+    <p>Choose an Alarm</p>
+    <ul id="alarms-options">
+      <li class="alarms" onclick="selectAlarm(this)">Alternative</li>
+      <li class="alarms" onclick="selectAlarm(this)">Classic</li>
+      <li class="alarms" onclick="selectAlarm(this)">Cuco</li>
+      <li class="alarms" onclick="selectAlarm(this)">Happy</li>
+    </ul>
+  </div>
+</body>
+</html>
