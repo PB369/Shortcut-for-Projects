@@ -29,13 +29,20 @@ function toggleOptionsButtons(){
 }
 
 function selectAlarm(selectedAlarm){
+
   alarms.forEach(alarm => {
-    alarm.removeAttribute("id")
+    let alarmName = alarm.textContent.toLowerCase()
+    let alarmAudio = new Audio(`/PomodoroTimer/audio/${alarmName}.mp3`)
+
+    if(alarm.textContent === selectedAlarm.textContent){
+      alarmAudio.play()
+    }
+    else{
+      alarmAudio.pause()
+      alarmAudio.currentTime = 0
+    }
   })
-  selectedAlarm.setAttribute("id", "selected-alarm")
-  let alarmName = selectedAlarm.textContent.toLowerCase()
-  alarmAudio = new Audio(`../audio/${alarmName}.mp3`)
-  playAlarmAudio(alarmAudio)
+
 }
 
 let timeAmount = 0

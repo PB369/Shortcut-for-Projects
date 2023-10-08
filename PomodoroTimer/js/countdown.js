@@ -31,7 +31,7 @@ let runCountdown = () =>{
   if(countdownTime === 0){
     let selectedAlarm = document.querySelector("#selected-alarm")
     let alarmName = selectedAlarm.textContent.toLowerCase()
-    alarmAudio = new Audio(`../audio/${alarmName}.mp3`)
+    alarmAudio = new Audio(`/PomodoroTimer/audio/${alarmName}.mp3`)
     stopTimer()
     playAlarmAudio(alarmAudio)
     cancelResetButton.textContent = "Reset"
@@ -44,6 +44,11 @@ let runCountdown = () =>{
 
 let playAlarmAudio = (alarmAudio) => {
   alarmAudio.play()
+}
+
+let stopAlarmAudio = (alarmAudio) => {
+  alarmAudio.pause()
+  alarmAudio.currentTime = 0
 }
 
 let renderTime = ()=>{
