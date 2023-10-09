@@ -184,15 +184,6 @@ body {
     border: 2px solid #FFF;
   }
 }
-@media screen and (max-width: 480px) {
-  #timer #start-stop-button {
-    width: 75px;
-    height: 24px;
-    font-size: 12px;
-    margin-bottom: 9px;
-    border: 1px solid #FFF;
-  }
-}
 #timer #start-stop-button:hover {
   background-color: white;
   color: #450920;
@@ -212,12 +203,6 @@ body {
 @media screen and (max-width: 820px) {
   #timer #cancel-reset-button {
     font-size: 12px;
-    margin-bottom: 5px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #timer #cancel-reset-button {
-    font-size: 8px;
     margin-bottom: 5px;
   }
 }
