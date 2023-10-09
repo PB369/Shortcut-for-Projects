@@ -28,6 +28,7 @@
 
 body {
   background: radial-gradient(circle, rgba(215, 0, 82, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), #450920;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -50,21 +51,47 @@ body {
 #alarm-icon, #close-icon {
   margin-right: 87px;
 }
+@media screen and (max-width: 820px) {
+  #alarm-icon, #close-icon {
+    margin-right: 58px;
+    margin-bottom: 200px;
+    width: 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #alarm-icon, #close-icon {
+    margin-right: 43px;
+    margin-bottom: 300px;
+    width: 25px;
+  }
+}
 
 #alarm-icon:hover, #close-icon:hover {
   cursor: pointer;
 }
 
 #timer {
-  width: 736px;
   height: 736px;
-  border-radius: 736px;
+  width: 736px;
+  border-radius: 50%;
   border: 5px solid #FFF;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 29px 0 29px 0;
+  margin: 29px;
+}
+@media screen and (max-width: 820px) {
+  #timer {
+    width: 490px;
+    height: 490px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #timer {
+    width: 368px;
+    height: 368px;
+  }
 }
 #timer #content-timer {
   display: flex;
@@ -82,15 +109,53 @@ body {
      -moz-user-select: none;
           user-select: none;
 }
+@media screen and (max-width: 820px) {
+  #timer #time {
+    font-size: 85px;
+    margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #timer #time {
+    font-size: 64px;
+    margin-bottom: 34px;
+  }
+}
 #timer #manage-time {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 68px;
+  width: 202px;
+  height: 83px;
+}
+@media screen and (max-width: 820px) {
+  #timer #manage-time {
+    width: 134px;
+    height: 55px;
+    margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #timer #manage-time {
+    width: 101px;
+    height: 41px;
+    margin-bottom: 34px;
+  }
 }
 #timer #manage-time #reduce-time {
   margin-right: 36px;
   transition: 0.15s;
+}
+@media screen and (max-width: 820px) {
+  #timer #manage-time #reduce-time {
+    margin-right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #timer #manage-time #reduce-time {
+    margin-right: 18px;
+  }
 }
 #timer #manage-time #reduce-time:hover, #timer #manage-time #increase-time:hover {
   cursor: pointer;
@@ -110,6 +175,24 @@ body {
   margin-bottom: 17px;
   transition: 0.15s;
 }
+@media screen and (max-width: 820px) {
+  #timer #start-stop-button {
+    width: 100px;
+    height: 32px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border: 2px solid #FFF;
+  }
+}
+@media screen and (max-width: 480px) {
+  #timer #start-stop-button {
+    width: 75px;
+    height: 24px;
+    font-size: 12px;
+    margin-bottom: 9px;
+    border: 1px solid #FFF;
+  }
+}
 #timer #start-stop-button:hover {
   background-color: white;
   color: #450920;
@@ -124,7 +207,19 @@ body {
   color: white;
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 13px;
+  margin-bottom: 9px;
+}
+@media screen and (max-width: 820px) {
+  #timer #cancel-reset-button {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #timer #cancel-reset-button {
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
 }
 #timer #cancel-reset-button:hover {
   cursor: pointer;
