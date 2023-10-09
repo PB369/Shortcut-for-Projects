@@ -9,6 +9,10 @@ let alarmIcon = document.querySelector("#alarm-icon")
 let closeIcon = document.querySelector("#close-icon")
 let alarmsPopUp = document.querySelector("#alarms-popup")
 let alarms = document.querySelectorAll(".alarms")
+let currentAlarm = null;
+
+let increaseButton = document.querySelector("#increase-button")
+let reduceButton = document.querySelector("#reduce-button")
 
 function toggleOptionsButtons(){
 
@@ -21,6 +25,11 @@ function toggleOptionsButtons(){
 
   }
   else {
+    if(currentAlarm) {
+      currentAlarm.pause();
+      currentAlarm.currentTime = 0;
+    }
+
     alarmIcon.style.display = "inline-block"
     closeIcon.style.display = "none"
     alarmsPopUp.style.display = "none"
@@ -28,34 +37,42 @@ function toggleOptionsButtons(){
   }
 }
 
-function selectAlarm(selectedAlarm){
+
+function selectAlarm(selectedAlarm) {
+  if(currentAlarm) {
+    currentAlarm.pause();
+    currentAlarm.currentTime = 0;
+  }
 
   alarms.forEach(alarm => {
-    let alarmName = alarm.textContent.toLowerCase()
-    let alarmAudio = new Audio(`/PomodoroTimer/audio/${alarmName}.mp3`)
+    alarm.removeAttribute("id");
+    let alarmName = alarm.textContent.toLowerCase();
+    let alarmAudio = new Audio(`/PomodoroTimer/audio/${alarmName}.mp3`);
 
-    if(alarm.textContent === selectedAlarm.textContent){
-      alarmAudio.play()
-    }
-    else{
-      alarmAudio.pause()
-      alarmAudio.currentTime = 0
+    if(alarm.textContent === selectedAlarm.textContent) {
+      currentAlarm = alarmAudio;
+      currentAlarm.play();
     }
   })
 
+  selectedAlarm.setAttribute("id", "selected-alarm");
 }
 
 let timeAmount = 0
 let countdownTime = 0
 let timerIsStopped = true
+let timerIsRunning = false
 
 startStopButton.addEventListener("click", ()=>{
+  timerIsRunning = !timerIsRunning
   let checkAlarmSelection = document.querySelector("#selected-alarm")
   if(checkAlarmSelection != null){
     if(startStopButton.textContent == "Start"){
+      console.log(timerIsRunning)
       startTimer()
     }
     else{
+      console.log(timerIsRunning)
       stopTimer()
     }
   }
@@ -63,6 +80,8 @@ startStopButton.addEventListener("click", ()=>{
     alert("First you need to choose an alarm.")
   }
 })
+
+console.log(startStopButton.textContent)
 
 cancelResetButton.addEventListener("click", () => {
   if(cancelResetButton.textContent == "Reset"){
@@ -73,8 +92,9 @@ cancelResetButton.addEventListener("click", () => {
   }
 })
 
+
 increaseTime.addEventListener("click", () => {
-  if(timeAmount < 60){
+  if(timeAmount < 60 && timerIsRunning == false){
     timeAmount += 5
     countdownTime = timeAmount * 60;
     renderTime()
@@ -82,7 +102,7 @@ increaseTime.addEventListener("click", () => {
 })
 
 reduceTime.addEventListener("click", () => {
-  if(timeAmount >= 5){
+  if(timeAmount >= 5 && timerIsRunning == false){
     timeAmount -= 5
     countdownTime = timeAmount * 60;
     renderTime()
