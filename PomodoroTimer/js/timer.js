@@ -37,7 +37,6 @@ function toggleOptionsButtons(){
   }
 }
 
-
 function selectAlarm(selectedAlarm) {
   if(currentAlarm) {
     currentAlarm.pause();
@@ -47,7 +46,7 @@ function selectAlarm(selectedAlarm) {
   alarms.forEach(alarm => {
     alarm.removeAttribute("id");
     let alarmName = alarm.textContent.toLowerCase();
-    let alarmAudio = new Audio(`/PomodoroTimer/audio/${alarmName}.mp3`);
+    let alarmAudio = new Audio(`../audio/${alarmName}.mp3`);
 
     if(alarm.textContent === selectedAlarm.textContent) {
       currentAlarm = alarmAudio;
@@ -64,7 +63,7 @@ let timerIsStopped = true
 let timerIsRunning = false
 
 startStopButton.addEventListener("click", ()=>{
-  timerIsRunning = !timerIsRunning
+
   let checkAlarmSelection = document.querySelector("#selected-alarm")
   if(checkAlarmSelection != null){
     if(startStopButton.textContent == "Start"){

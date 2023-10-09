@@ -15,6 +15,7 @@ let stopTimer = () => {
   if(timerIsStopped){
     startStopButton.textContent = "Start"
     clearInterval(countTimer)
+    timerIsRunning = false
   }
 }
 
@@ -29,14 +30,16 @@ let startTimer = () =>{
 
 let runCountdown = () =>{
   if(countdownTime === 0){
+    timerIsRunning = false
     let selectedAlarm = document.querySelector("#selected-alarm")
     let alarmName = selectedAlarm.textContent.toLowerCase()
-    alarmAudio = new Audio(`/PomodoroTimer/audio/${alarmName}.mp3`)
+    alarmAudio = new Audio(`../audio/${alarmName}.mp3`)
     stopTimer()
     playAlarmAudio(alarmAudio)
     cancelResetButton.textContent = "Reset"
   }
   else {
+    timerIsRunning = true
     countdownTime -= 1
     renderTime()
   }
