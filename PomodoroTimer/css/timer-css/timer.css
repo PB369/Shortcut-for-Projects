@@ -51,11 +51,16 @@ body {
 #alarm-icon, #close-icon {
   margin-right: 87px;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 820px), (max-height: 840px) {
   #alarm-icon, #close-icon {
     margin-right: 58px;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     width: 25px;
+  }
+}
+@media screen and (max-height: 650px) {
+  #alarm-icon, #close-icon {
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -81,16 +86,23 @@ body {
   align-items: center;
   margin: 29px;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 820px), (max-height: 840px) {
   #timer {
     width: 490px;
     height: 490px;
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 480px) {
   #timer {
     width: 368px;
     height: 368px;
+  }
+}
+@media screen and (max-width: 390px) {
+  #timer {
+    width: 275px;
+    height: 275px;
   }
 }
 #timer #content-timer {
@@ -109,7 +121,7 @@ body {
      -moz-user-select: none;
           user-select: none;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 820px), (max-height: 840px) {
   #timer #time {
     font-size: 85px;
     margin-bottom: 45px;
@@ -121,6 +133,12 @@ body {
     margin-bottom: 34px;
   }
 }
+@media screen and (max-width: 390px) {
+  #timer #time {
+    font-size: 42px;
+    margin-bottom: 17px;
+  }
+}
 #timer #manage-time {
   display: flex;
   justify-content: center;
@@ -129,7 +147,7 @@ body {
   width: 202px;
   height: 83px;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 820px), (max-height: 840px) {
   #timer #manage-time {
     width: 134px;
     height: 55px;
@@ -139,15 +157,20 @@ body {
 @media screen and (max-width: 480px) {
   #timer #manage-time {
     width: 101px;
-    height: 41px;
     margin-bottom: 34px;
+  }
+}
+@media screen and (max-width: 390px) {
+  #timer #manage-time {
+    width: 82px;
+    margin-bottom: 23px;
   }
 }
 #timer #manage-time #reduce-time {
   margin-right: 36px;
   transition: 0.15s;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 820px), (max-height: 840px) {
   #timer #manage-time #reduce-time {
     margin-right: 24px;
   }
@@ -175,7 +198,7 @@ body {
   margin-bottom: 17px;
   transition: 0.15s;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 820px), (max-height: 840px) {
   #timer #start-stop-button {
     width: 100px;
     height: 32px;
@@ -200,7 +223,7 @@ body {
   font-weight: 400;
   margin-bottom: 9px;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 820px), (max-height: 840px) {
   #timer #cancel-reset-button {
     font-size: 12px;
     margin-bottom: 5px;
