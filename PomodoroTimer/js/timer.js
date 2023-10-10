@@ -67,11 +67,9 @@ startStopButton.addEventListener("click", ()=>{
   let checkAlarmSelection = document.querySelector("#selected-alarm")
   if(checkAlarmSelection != null){
     if(startStopButton.textContent == "Start"){
-      console.log(timerIsRunning)
       startTimer()
     }
     else{
-      console.log(timerIsRunning)
       stopTimer()
     }
   }
@@ -80,7 +78,6 @@ startStopButton.addEventListener("click", ()=>{
   }
 })
 
-console.log(startStopButton.textContent)
 
 cancelResetButton.addEventListener("click", () => {
   if(cancelResetButton.textContent == "Reset"){
