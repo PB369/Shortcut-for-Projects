@@ -1,11 +1,13 @@
 let resetTimer = () => {
-  countdownTime = timeAmount * 60;
+  countdownTime = lastTime * 60;
   renderTime()
 }
 
 let cancelTimer = () => {
   stopTimer()
   countdownTime = 0
+  lastTime = timeAmount
+  timeAmount = 0
   time.textContent = "00 : 00"
   cancelResetButton.textContent = "Reset"
 }
@@ -31,6 +33,7 @@ let startTimer = () =>{
 let runCountdown = () =>{
   if(countdownTime === 0){
     timerIsRunning = false
+    lastTime = timeAmount
     let selectedAlarm = document.querySelector("#selected-alarm")
     let alarmName = selectedAlarm.textContent.toLowerCase()
     alarmAudio = new Audio(`../audio/${alarmName}.mp3`)

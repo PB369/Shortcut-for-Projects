@@ -59,6 +59,7 @@ function selectAlarm(selectedAlarm) {
 
 let timeAmount = 0
 let countdownTime = 0
+let lastTime = 0
 let timerIsStopped = true
 let timerIsRunning = false
 
