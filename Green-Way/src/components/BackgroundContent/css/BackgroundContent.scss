@@ -1,0 +1,30 @@
+$subtitle-font: 36px;
+
+main {
+  background-color: white;
+  height: 82vh;
+
+  .background {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      background-color: #274F29;
+      position: relative;
+      height: 410px;
+  
+      h2 {
+        font-size: $subtitle-font;
+        color: white;
+        padding-top: 75px;
+        text-align: center;
+      }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  $subtitle-font: 24px;
+  main .background h2 {
+    font-size: $subtitle-font;
+  }
+}

@@ -1,0 +1,29 @@
+$footer-font: 14px;
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #274F29;
+  height: 8vh;
+
+  p {
+    font-size: $footer-font;
+    color: white;
+
+    a {
+      color: white;
+      text-decoration:none;
+      background-color: #466F45;
+      padding: 3px 5px;
+      transition: 0.25s;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  $footer-font: 12px;
+  footer p {
+    font-size: $footer-font;
+  }
+}

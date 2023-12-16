@@ -1,0 +1,17 @@
+$title-font: 40px;
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+
+  h1 {font-size: $title-font;}
+}
+
+@media screen and (max-width: 1440px) {
+  $title-font: 28px;
+  header h1 {
+    font-size: $title-font;
+  }
+}
