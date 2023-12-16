@@ -6,7 +6,10 @@ header {
   align-items: center;
   height: 10vh;
 
-  h1 {font-size: $title-font;}
+  h1 {
+    font-size: $title-font;
+    font-weight: normal;
+  }
 }
 
 @media screen and (max-width: 1440px) {
