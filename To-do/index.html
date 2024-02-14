@@ -3,15 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerenciador de Tarefas</title>
+  <title>My Tasktop</title>
   <script src="script.js" defer></script>
+  <link rel="stylesheet" href="./css/generalStyle/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
-  <div id="task__manager">
-    <input id="task__input" type="text" placeholder="Digite uma nova tarefa..."/>
-    <button id="add__button">Adicionar</button>
-  </div>
-  <div id="tasks">
-  </div>
+  <header>
+    <h1>My Tasktop</h1>
+  </header>
+  <main>
+    <div id="add__task">
+      <input id="task__input" type="text" placeholder="Digite uma nova tarefa..."/>
+      <button id="add__button">+</button>
+    </div>
+    <div id="tasks">
+      <ul>
+        <li class="task">
+          <span>Tarefa 1</span>
+          <button class="editTaskButton">Editar</button>
+          <button class="removeTaskButton">X</button>
+        </li>
+        <li class="task">
+          <span>
+            <input type="text" value="Tarefa 2"/>
+            <button>V</button>
+          </span>
+          <button class="editTaskButton">Editar</button>
+          <button class="removeTaskButton">X</button>
+        </li>
+      </ul>
+    </div>
+  </main>
 </body>
 </html>
