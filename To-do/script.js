@@ -1,6 +1,7 @@
 let input = document.querySelector("#task__input")
 let addNewTaskButton = document.querySelector("#add__button")
 let tasks = document.querySelector("#tasks")
+let editIsLocked = false
 
 function addNewTask(event){
   event.preventDefault
@@ -42,27 +43,39 @@ addNewTaskButton.addEventListener("click", (event) => {
 
 function editTask(event) {
   event.preventDefault
+  if (editIsLocked === false){
+    let liOfTask = event.target.parentElement
+    let spanOfTask = liOfTask.querySelector("span")
+    let contentOfSpan = spanOfTask.textContent
 
-  let liOfTask = event.target.parentElement
-  let inputToEditTask = document.createElement("input")
-  let finishEditButton = document.createElement("button")
-  liOfTask.appendChild(inputToEditTask)
-  liOfTask.appendChild(finishEditButton)
-  finishEditButton.textContent = "V"
-  finishEditButton.addEventListener("click", (event) => {
-    event.preventDefault
-
-    liOfTask.textContent = inputToEditTask.value
+    let inputToEditTask = document.createElement("input")
+    inputToEditTask.value = contentOfSpan
+    let finishEditButton = document.createElement("button")
+    finishEditButton.textContent = "V"
     
-    finishEditButton.remove()
-    inputToEditTask.remove()
-  })
+    spanOfTask.textContent = ""
+    spanOfTask.appendChild(inputToEditTask)
+    spanOfTask.appendChild(finishEditButton)
+    
+    finishEditButton.addEventListener("click", (event) => {
+      event.preventDefault
+      
+      let spanOfTask = liOfTask.querySelector("span")
+      spanOfTask.textContent = inputToEditTask.value
+      
+      finishEditButton.remove()
+      inputToEditTask.remove()
+      editIsLocked = false
+    })
+    editIsLocked = true
+  }
 }
 
 function removeTask(event) {
   event.preventDefault
-  
+
   let liOfTask = event.target.parentElement
   let ulOfTask = liOfTask.parentElement
   ulOfTask.remove()
+  editIsLocked = false
 }
