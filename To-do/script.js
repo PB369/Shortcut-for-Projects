@@ -10,6 +10,8 @@ function addNewTask(event){
   let taskUl = document.createElement("ul")
   let taskLi = document.createElement("li")
   let taskSpan = document.createElement("span")
+  taskSpan.textContent = task
+  let taskDiv = document.createElement("div")
   
   let editTaskButton = document.createElement("button")
   editTaskButton.classList.add("editTaskButton")
@@ -24,17 +26,17 @@ function addNewTask(event){
   removeTaskButton.addEventListener("click", (event) => {
     removeTask(event)
   })
- 
-  taskSpan.textContent = task
+  
+  tasks.appendChild(taskUl)
+  taskUl.appendChild(taskLi)
   taskLi.classList.add("task")
   taskLi.appendChild(taskSpan)
-  taskLi.appendChild(editTaskButton)
-  taskLi.appendChild(removeTaskButton)
-  taskUl.appendChild(taskLi)
-  tasks.appendChild(taskUl)
-  console.log(tasks)
+  taskLi.appendChild(taskDiv)
+  taskDiv.appendChild(editTaskButton)
+  taskDiv.appendChild(removeTaskButton)
   input.value = ""
-
+  
+  console.log(tasks)
 }
 
 addNewTaskButton.addEventListener("click", (event) => {
@@ -44,7 +46,8 @@ addNewTaskButton.addEventListener("click", (event) => {
 function editTask(event) {
   event.preventDefault
   if (editIsLocked === false){
-    let liOfTask = event.target.parentElement
+    let divOfTask = event.target.parentElement
+    let liOfTask = divOfTask.parentElement
     let spanOfTask = liOfTask.querySelector("span")
     let contentOfSpan = spanOfTask.textContent
 
@@ -56,6 +59,7 @@ function editTask(event) {
     spanOfTask.textContent = ""
     spanOfTask.appendChild(inputToEditTask)
     spanOfTask.appendChild(finishEditButton)
+    
     
     finishEditButton.addEventListener("click", (event) => {
       event.preventDefault
