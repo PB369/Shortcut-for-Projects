@@ -15,14 +15,14 @@ function addNewTask(event){
   
   let editTaskButton = document.createElement("button")
   editTaskButton.classList.add("editTaskButton")
-  editTaskButton.textContent = "Editar"
-  editTaskButton.addEventListener("click", (event) => {
+  editTaskButton.innerHTML = "<i class='fa-solid fa-pen fa-lg'></i"
+  editTaskButton.children[0].addEventListener("click", (event) => {
     editTask(event)
   })
   
   let removeTaskButton = document.createElement("button")
   removeTaskButton.classList.add("removeTaskButton")
-  removeTaskButton.textContent = "X"
+  removeTaskButton.innerHTML = "<i class='fa-solid fa-xmark fa-lg'></i>"
   removeTaskButton.addEventListener("click", (event) => {
     removeTask(event)
   })
@@ -46,7 +46,8 @@ addNewTaskButton.addEventListener("click", (event) => {
 function editTask(event) {
   event.preventDefault
   if (editIsLocked === false){
-    let divOfTask = event.target.parentElement
+    let buttonToEdit = event.target.parentElement
+    let divOfTask = buttonToEdit.parentElement
     let liOfTask = divOfTask.parentElement
     let spanOfTask = liOfTask.querySelector("span")
     let contentOfSpan = spanOfTask.textContent
@@ -54,14 +55,13 @@ function editTask(event) {
     let inputToEditTask = document.createElement("input")
     inputToEditTask.value = contentOfSpan
     let finishEditButton = document.createElement("button")
-    finishEditButton.textContent = "V"
+    finishEditButton.innerHTML = "<i class='fa-solid fa-check fa-lg'></i>"
     
     spanOfTask.textContent = ""
     spanOfTask.appendChild(inputToEditTask)
     spanOfTask.appendChild(finishEditButton)
     
-    
-    finishEditButton.addEventListener("click", (event) => {
+    finishEditButton.children[0].addEventListener("click", (event) => {
       event.preventDefault
       
       let spanOfTask = liOfTask.querySelector("span")
@@ -78,7 +78,8 @@ function editTask(event) {
 function removeTask(event) {
   event.preventDefault
 
-  let liOfTask = event.target.parentElement
+  let buttonToRemove = event.target.parentElement
+  let liOfTask = buttonToRemove.parentElement
   let ulOfTask = liOfTask.parentElement
   ulOfTask.remove()
   editIsLocked = false

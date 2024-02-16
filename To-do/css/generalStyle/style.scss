@@ -55,7 +55,6 @@ main {
 
   #tasks {
     margin-top: 60px;
-    width: 450px;
     
     ul {
       width: 100%;
@@ -78,7 +77,6 @@ main {
         margin-right: 5px;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
 
         input {
           outline: none;
@@ -98,15 +96,61 @@ main {
 
       span button, div button {
         background-color: transparent;
-        border: 1px solid black;
-        padding: 3px;
+        border: none;
         margin: 0 4px;
-        font-size: 1.03em;
+
+        i {
+          padding: 3px;
+        }
       }
 
-      span button:hover, div button:hover {
+      span button i:hover, div button i:hover {
         cursor: pointer;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  main {
+    #add__task {
+      width: 240px;
+      #task__input {
+        font-size: 1em;
+      }
+    }
+    
+    #tasks {
+      width: 85%;
+      ul li {
+        span {
+          font-size: 0.8em;
+          input {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    #tasks {
+      width: 45%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1125px) {
+  main {
+    #tasks {
+      width: 30%;
     }
   }
 }
