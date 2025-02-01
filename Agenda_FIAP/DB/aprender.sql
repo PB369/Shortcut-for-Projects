@@ -1,0 +1,10 @@
+DROP  DATABASE APRENDER;
+CREATE DATABASE APRENDER;
+USE APRENDER;
+
+CREATE TABLE CLIENTE(
+cli_cod integer AUTO_INCREMENT NOT NULL,
+cli_nome varchar(50) NOT NULL,
+cli_end varchar(50) NOT NULL,
+cli_tel bigint(15) NOT NULL,
+PRIMARY KEY(cli_cod) );
