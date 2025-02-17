@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoolForm</title>
+  <link rel="stylesheet" href="./style.css">
+  <!--Email & Password icons-->
+  <script src="https://kit.fontawesome.com/d954151c07.js" crossorigin="anonymous"></script>
+  <!---->
+</head>
+<body>
+  <form action="#" method="post">
+    <fieldset id="form-header">
+      <h1>Sign in to start.</h1>
+      <p>Put your account data below and press the 'Access' button to finish it.</p>
+    </fieldset>
+    <fieldset id="data">
+      <div id="email-box"><input type="email" class="input-field" placeholder="Email"><i class="fa-regular fa-envelope  input-icon" id="email-icon"></i></div>
+      <div id="password-box"><input type="password" id="password-input" class="input-field" placeholder="Password"><i class="fa-solid fa-lock input-icon" id="password-icon"></i></div>
+      <input type="button" value="Forgot Password" id="forgot-btn">
+    </fieldset>
+    <input type="button" value="Access" id="access-btn">
+    <fieldset id="sign-in-box">
+      <p>Or sign in with</p>
+      <div>
+        <div id="google-login">
+          <img src="./images/google-icon.png" alt="google-icon">
+        </div>
+        <div id="facebook-login">
+          <img src="./images/facebook-icon.png" alt="facebook-icon">
+        </div>
+        <div id="apple-login">
+          <img src="./images/apple-icon.png" alt="apple-icon">
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
