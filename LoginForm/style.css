@@ -10,18 +10,23 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-image: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 form {
-  border: 1px solid black;
   border-radius: 15px;
   max-width: 50%;
   min-width: 275px;
-  height: 600px;
+  min-height: 600px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0 0 15px black;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
 }
 
 fieldset {
@@ -52,7 +57,7 @@ fieldset {
   flex-direction: column;
 }
 
-#data div {
+#data div:not([id="check-forgot-box"]) {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
   margin: 10px 0;
@@ -70,6 +75,12 @@ fieldset {
   outline: none;
   padding: 0;
   padding-right: 10px;
+  background-color: transparent;
+  color: black;
+}
+
+.input-field::placeholder {
+  color: rgb(31, 31, 31);
 }
 
 @media screen and (max-width: 680px) {
@@ -93,10 +104,16 @@ fieldset {
   border-bottom: 1px solid black;
   padding: 0;
   align-self: flex-end;
+  transition: 0.05s;
 }
 
 #forgot-btn:hover{
   cursor: pointer;
+}
+
+#forgot-btn:active{
+  color: white;
+  border-color: white;
 }
 
 #access-btn {
@@ -106,13 +123,13 @@ fieldset {
   padding: 10px 50px;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: 0 0 3px black;
+  box-shadow: 0 0 6px white;
   transition: 0.25s;
   font-weight: bold;
 }
 
 #access-btn:hover {
-  box-shadow: 0 0 6px black;
+  box-shadow: 0 0 12px white;
   cursor: pointer;
 }
 
@@ -125,7 +142,27 @@ fieldset {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
+}
+
+#sign-in-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#sign-in-text p {
+  text-align: center;
+  font-weight: bold;
+} 
+
+#sign-in-text .row {
+  border: none;
+  border-bottom: 1px solid black;
+  height: 1px;
+  width: 12%;
+  margin: 10px;
 }
 
 #sign-in-options {
@@ -138,11 +175,32 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 40px;
+  padding: 12px 40px;
   margin: 0 10px;
   box-shadow: 0px 0px 4px black;
   border-radius: 8px;
+  transition: 0.25s;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.options img {
+.options:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.705);
+}
+
+@media screen and (max-width: 800px) {
+  #data {
+    margin-bottom: 20px;
+  }
+
+  #sign-in-options {
+    flex-wrap: wrap;
+  }
+  .options {
+    margin: 5px;
+    padding: 15px 30px;
+  }
+  .options img {
+    width: 24px;
+  }
 }
