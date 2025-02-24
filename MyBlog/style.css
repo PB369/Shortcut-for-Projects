@@ -16,23 +16,47 @@
   }
 
   .articles-text {
-    @apply flex flex-col justify-center items-center mb-5 lg:items-start
+    @apply flex flex-col justify-center items-center mb-5 lg:block
   }
 
   .tags {
-    @apply bg-tertiary py-1 px-2 text-sm border-[1px] border-black rounded-xl font-bold lg:self-start lg:text-base
+    @apply bg-tertiary py-1.5 px-2 text-sm border-[1px] border-black rounded-xl font-bold lg:self-start lg:text-base
   }
 
   .articles-head {
     @apply flex flex-col justify-center items-center py-3 mt-1 lg:flex-row lg:justify-between
   }
 
-  .images {
+  .articles-images {
     @apply w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] xl:h-[300px] 2xl:w-[500px] 2xl:h-[400px] object-cover rounded-2xl border-black border-[1px]
   }
 
   .read-btn {
-    @apply bg-tertiary py-2 font-bold border-[1px] rounded-sm hover:cursor-pointer
+    @apply bg-tertiary px-3 py-2 font-bold border-[1px] rounded-sm hover:cursor-pointer lg:self-end
   }
 
+  .gallery {
+    @apply grid grid-cols-1 justify-items-center w-9/10 border-[1px] p-5 gap-5 bg-secundary shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-2xl sm:grid-cols-2 lg:w-5/6 xl:w-2/3 2xl:grid-cols-4
+  }
+
+  .gallery-images {
+    @apply w-[300px] h-[300px] object-cover border-black border-[1px] lg:w-[400px] 2xl:w-[300px]
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
 }

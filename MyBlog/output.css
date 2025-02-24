@@ -524,8 +524,14 @@
   .my-7 {
     margin-block: calc(var(--spacing) * 7);
   }
+  .mb-0 {
+    margin-bottom: calc(var(--spacing) * 0);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-14 {
+    margin-bottom: calc(var(--spacing) * 14);
   }
   .flex {
     display: flex;
@@ -573,15 +579,33 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
   .text-white {
     color: var(--color-white);
   }
   .italic {
     font-style: italic;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .shadow-\[0_-4px_8px_rgba\(0\,0\,0\,0\.25\)\] {
+    --tw-shadow: 0 -4px 8px var(--tw-shadow-color, rgba(0,0,0,0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .shadow-\[0_4px_8px_rgba\(0\,0\,0\,0\.25\)\] {
     --tw-shadow: 0 4px 8px var(--tw-shadow-color, rgba(0,0,0,0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
   }
   .lg\:text-2xl {
     @media (width >= 64rem) {
@@ -659,7 +683,7 @@
     align-items: center;
     justify-content: center;
     @media (width >= 64rem) {
-      align-items: flex-start;
+      display: block;
     }
   }
   .tags {
@@ -669,7 +693,7 @@
     border-color: var(--color-black);
     background-color: var(--color-tertiary);
     padding-inline: calc(var(--spacing) * 2);
-    padding-block: calc(var(--spacing) * 1);
+    padding-block: calc(var(--spacing) * 1.5);
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
     --tw-font-weight: var(--font-weight-bold);
@@ -696,7 +720,7 @@
       justify-content: space-between;
     }
   }
-  .images {
+  .articles-images {
     height: 300px;
     width: 300px;
     border-radius: var(--radius-2xl);
@@ -725,6 +749,7 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
     background-color: var(--color-tertiary);
+    padding-inline: calc(var(--spacing) * 3);
     padding-block: calc(var(--spacing) * 2);
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -733,7 +758,62 @@
         cursor: pointer;
       }
     }
+    @media (width >= 64rem) {
+      align-self: flex-end;
+    }
   }
+  .gallery {
+    display: grid;
+    width: calc(9/10 * 100%);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: center;
+    gap: calc(var(--spacing) * 5);
+    border-radius: var(--radius-2xl);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    background-color: var(--color-secundary);
+    padding: calc(var(--spacing) * 5);
+    --tw-shadow: 0 0 8px var(--tw-shadow-color, rgba(0,0,0,0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (width >= 64rem) {
+      width: calc(5/6 * 100%);
+    }
+    @media (width >= 80rem) {
+      width: calc(2/3 * 100%);
+    }
+    @media (width >= 96rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .gallery-images {
+    height: 300px;
+    width: 300px;
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-black);
+    object-fit: cover;
+    @media (width >= 64rem) {
+      width: 400px;
+    }
+    @media (width >= 96rem) {
+      width: 300px;
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
 }
 @keyframes spin {
   to {
