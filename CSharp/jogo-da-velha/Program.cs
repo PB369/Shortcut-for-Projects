@@ -4,13 +4,31 @@ namespace jogoDaVelha
 {
     class Program
     {
-        static int option = 0;
         static void Main()
         {
+            Game.menu();
+        }
+    }
+
+    class Game
+    {
+        static int option = 0;
+        static int round = 0;
+        static bool gameFinished = false;
+        static int userPoints;
+        static int botPoints;
+        static int userChoice;
+        static int botChoice;
+        static Random randomChoice = new Random();
+        static string[] options = { "Pedra", "Papel", "Tesoura" };
+        
+        public static void menu()
+        {
+            option = 0;
             Console.WriteLine("Seja bem-vindo ao Jogo de Pedra, Papel e Tesoura!");
             Console.WriteLine("\n[1] - Jogar\n[2] - Sair\n");
 
-            while(option == 0)
+            while (option == 0)
             {
                 Console.Write("Digite a opção desejada para continuar: ");
                 option = Convert.ToInt32(Console.ReadLine());
@@ -29,24 +47,19 @@ namespace jogoDaVelha
                 }
             }
         }
-    }
-
-    class Game
-    {
-        static bool gameFinished = false;
-        static int round = 0;
-        static int userPoints;
-        static int botPoints;
-        static int userChoice;
-        static int botChoice;
-        static Random randomChoice = new Random();
-        static string[] options = { "Pedra", "Papel", "Tesoura" };
+        
         public static void start()
         {
-            while(gameFinished == false)
+            gameFinished = false;
+            round = 0;
+            userPoints = 0;
+            botPoints = 0;
+
+            while (gameFinished == false)
             {
+                round++;
                 Console.WriteLine(new string('-', 30));
-                Console.WriteLine("RODADA ", round + 1);
+                Console.WriteLine($"RODADA {round}\n");
                 Console.WriteLine("[1] - Pedra\n[2] - Papel\n[3] - Tesoura\n\nDigite a sua escolha para esta rodada:");
                 
                 userChoice = Convert.ToInt32(Console.ReadLine());
@@ -54,39 +67,35 @@ namespace jogoDaVelha
 
                 if (userChoice == botChoice)
                 {
-                    Console.WriteLine($"EMPATE! Você escolheu a mesma opção que o seu adversário ({options[botChoice-1]})"); // INDEX OUT OF RANGE
-                } else if(userChoice == 1 && botChoice == 3)
+                    Console.WriteLine($"\nEMPATE! Você escolheu a mesma opção que o seu adversário ({options[botChoice-1]})");
+                } else if((userChoice == 1 && botChoice == 3) || (userChoice == 2 && botChoice == 1) || (userChoice == 3 && botChoice == 2))
                 {
-                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
-                    userPoints += 1;
-                }
-                else if (userChoice == 2 && botChoice == 1)
-                {
-                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
-                    userPoints += 1;
-                }
-                else if (userChoice == 3 && botChoice == 2)
-                {
-                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
+                    Console.WriteLine($"\nVOCÊ GANHOU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
                     userPoints += 1;
                 } else
                 {
-                    Console.WriteLine($"VOCÊ PERDEU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
+                    Console.WriteLine($"\nVOCÊ PERDEU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
                     botPoints += 1;
                 }
 
                 if(userPoints == 5)
                 {
+                    Console.WriteLine(new string('-', 30));
                     Console.WriteLine("FIM DE JOGO. VOCÊ FOI O VENCEDOR, PARABÉNS!");
-                    Console.WriteLine("\nDigite qualquer tecla para voltar ao menu: ");
-                    Console.ReadLine()
+                    Console.Write("\nPressione a tecla ENTER para voltar ao menu: ");
+                    Console.WriteLine(new string('-', 30));
+                    Console.ReadLine();
                     gameFinished=true;
-                    //CONTINUAR AQUI
+                    Game.menu();
 
                 } else if(botPoints == 5)
                 {
+                    Console.WriteLine(new string('-', 30));
                     Console.WriteLine("FIM DE JOGO. O ADVERSÁRIO FOI O VENCEDOR, BOA SORTE NA PRÓXIMA!");
-                    Console.WriteLine("\nDigite qualquer tecla para voltar ao menu: ");
+                    Console.Write("\nPressione a tecla ENTER para voltar ao menu: ");
+                    Console.ReadLine();
+                    gameFinished = true;
+                    Game.menu();
                 }
             }
         }
