@@ -54,24 +54,24 @@ namespace jogoDaVelha
 
                 if (userChoice == botChoice)
                 {
-                    Console.WriteLine($"EMPATE! Você escolheu a mesma opção que o seu adversário ({options[botChoice]})"); // INDEX OUT OF RANGE
+                    Console.WriteLine($"EMPATE! Você escolheu a mesma opção que o seu adversário ({options[botChoice-1]})"); // INDEX OUT OF RANGE
                 } else if(userChoice == 1 && botChoice == 3)
                 {
-                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice]} e a do seu adversário foi {options[botChoice]}");
+                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
                     userPoints += 1;
                 }
                 else if (userChoice == 2 && botChoice == 1)
                 {
-                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice]} e a do seu adversário foi {options[botChoice]}");
+                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
                     userPoints += 1;
                 }
                 else if (userChoice == 3 && botChoice == 2)
                 {
-                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice]} e a do seu adversário foi {options[botChoice]}");
+                    Console.WriteLine($"VOCÊ GANHOU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
                     userPoints += 1;
                 } else
                 {
-                    Console.WriteLine($"VOCÊ PERDEU! Sua escolha foi {options[userChoice]} e a do seu adversário foi {options[botChoice]}");
+                    Console.WriteLine($"VOCÊ PERDEU! Sua escolha foi {options[userChoice-1]} e a do seu adversário foi {options[botChoice-1]}");
                     botPoints += 1;
                 }
 
@@ -79,7 +79,8 @@ namespace jogoDaVelha
                 {
                     Console.WriteLine("FIM DE JOGO. VOCÊ FOI O VENCEDOR, PARABÉNS!");
                     Console.WriteLine("\nDigite qualquer tecla para voltar ao menu: ");
-                    Console.ReadLine();
+                    Console.ReadLine()
+                    gameFinished=true;
                     //CONTINUAR AQUI
 
                 } else if(botPoints == 5)
