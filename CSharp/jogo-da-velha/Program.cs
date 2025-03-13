@@ -25,6 +25,7 @@ namespace jogoDaVelha
         public static void menu()
         {
             option = 0;
+            Console.WriteLine(new string('-', 30));
             Console.WriteLine("Seja bem-vindo ao Jogo de Pedra, Papel e Tesoura!");
             Console.WriteLine("\n[1] - Jogar\n[2] - Sair\n");
 
