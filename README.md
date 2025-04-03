@@ -1,4 +1,4 @@
-# ⭐ List of all my personal Projects on GitHub! ⭐
+# ⭐ List of all my personal projects on GitHub! ⭐
 
 This is a repository that serves as an easy-access channel to all the repositories and deploys (when available) of my projects that I have developed. This way I can make your life more simple! 🎯
 
