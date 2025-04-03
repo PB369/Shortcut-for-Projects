@@ -6,7 +6,7 @@ Here you will find not only the links to access my projects, but you will also b
 
 If you prefer, may consider accessing my projects throw my [portfolio](https://pebarros.vercel.app). There you'll also be able to know a little more about me and about what I do. 😁
 
-## Status legend
+## 🏷️ Status legend
 | Emoji  | Description |
 | :---:  | :---:  |
 | ✅ Finished  | The project is finished |
@@ -15,8 +15,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 | 🟠 Imminent removal | The project repository may soon be deleted or marked as private  |
 
 ## 🔍 Browse by Category
-- [💻 Web](#-web-projects)  
-- [📱 Mobile](#-mobile-projects) 
+- [💻 Web](#-web-projects)
 - [🏆 Others](#-other-projects)
 
 ## 💻 Web Projects
