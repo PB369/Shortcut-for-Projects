@@ -20,14 +20,14 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 
 ## 💻 Web Projects
 
-### 1. [MyTasktop]([https://github.com/seu-usuario/nome-do-projeto-1](https://github.com/PB369/My-Tasktop))
+### 1. [MyTasktop](https://github.com/PB369/My-Tasktop)
 📘 **Fast Description:** Just a to-do app (will be expanded in the future). <br/> 
-🛠️ **Technologies:** HTML, Sass, JavaScript. <br/>
-🚀 **Status:** ✅ Finished && 🔄 To be updated. <br/> 
+🛠️ **Technologies:** HTML, Sass, JavaScript <br/>
+🚀 **Status:** ✅ Finished | 🔄 To be updated <br/> 
 🔗 **Deploy:** (link) <br/>
 
-### 2. [Simple Search]([https://github.com/seu-usuario/nome-do-projeto-1](https://github.com/PB369/Simple-Search))
+### 2. [Simple Search](https://github.com/PB369/Simple-Search)
 📘 **Fast Description:** A basic interface for web navigation. <br/>
 🛠️ **Technologies:** HTML, CSS <br/>
-🚀 **Status:** ⏳ In Progress <br/>
+🚀 **Status:** ✅ Finished | 🔄 To be updated <br/>
 🔗 **Deploy:** (link) <br/>
