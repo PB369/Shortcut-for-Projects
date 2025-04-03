@@ -18,7 +18,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 ## 🔍 Browse by Category
 
 - [💻 Web](#-web-projects)
-- [🏆 Others](#-others)
+- [🏆 Others](#-others-projects)
 
 ## 💻 Web Projects
 
@@ -54,7 +54,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 🛠️ **Technologies:** HTML/CSS <br/>
 🚀 **Status:** ✅ Finished <br/>
 
-## ⚜️ Others
+## ⚜️ Others Projects
 
 ### 1. [Parking Sensor](https://github.com/PB369/Parking-Sensor)
 📘 **Fast Description:** A parking sensor, just like cars have. This can easily be adapted to be an intrusion alarm. <br/>
