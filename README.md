@@ -7,7 +7,7 @@ Here you will find not only the links to access my projects, but you will also b
 If you prefer, may consider accessing my projects throw my [portfolio](https://pebarros.vercel.app). There you'll also be able to know a little more about me and about what I do. 😁
 
 ## 🏷️ Status legend
-| Emoji  | Description |
+| Status  | Description |
 | :---:  | :---:  |
 | ✅ Finished  | The project is finished |
 | ⏳ In Progress | The project is under development or being updated  |
