@@ -49,8 +49,8 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 🛠️ **Technologies:** HTML/CSS <br/>
 🚀 **Status:** ✅ Finished | 🔄 To be updated <br/>
 
-### 6. [LoginForm]([https://github.com/PB369](https://pb369-projects-pomodorotimer.vercel.app/)/LoginForm)
-📘 **Fast Description:** Just a static sign in page for design practice. <br/>
+### 6. [LoginForm](https://github.com/PB369/LoginForm)
+📘 **Fast Description:** Just a static Sign In page for design practice. <br/>
 🛠️ **Technologies:** HTML/CSS <br/>
 🚀 **Status:** ✅ Finished <br/>
 
