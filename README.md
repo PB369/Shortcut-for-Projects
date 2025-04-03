@@ -14,7 +14,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 ## 💻 Web Projects
 
 ### 1. [Project 1](https://github.com/seu-usuario/nome-do-projeto-1)
-⚡ **Fast Description:** Lorem Ipsum dolorem amet. <br/> 
+📘 **Fast Description:** Lorem Ipsum dolorem amet. <br/> 
 🔧 **Technologies:** HTML, CSS, JavaScript <br/>
 🚀 **Status:** ✅ Finished <br/> 
 🔗 **Deploy:** (link) <br/>
