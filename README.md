@@ -18,7 +18,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 ## 🔍 Browse by Category
 
 - [💻 Web](#-web-projects)
-- [🏆 Others](#-other-projects)
+- [🏆 Others](#-others)
 
 ## 💻 Web Projects
 
