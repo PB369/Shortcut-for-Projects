@@ -25,7 +25,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 ### 1. [MyBlog](https://github.com/PB369/MyBlog)
 📘 **Fast Description:** A static home page for a blog. <br/>
 🛠️ **Technologies:** HTML/CSS, Tailwind <br/>
-🚀 **Status:** ✅ Finished | 🔄 To be updated <br/>
+🚀 **Status:** ⏳ In Progress | 🔄 To be updated <br/>
 
 ### 2. [Green Way](https://github.com/PB369/Green-Way)
 📘 **Fast Description:** A currency converter (but simple and elegant). <br/>
