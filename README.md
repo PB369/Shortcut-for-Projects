@@ -26,6 +26,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 📘 **Fast Description:** A fully functional blog with database and authentication. <br/>
 🛠️ **Technologies:** HTML/CSS, Tailwind <br/>
 🚀 **Status:** ✅ Finished <br/>
+🔗 **Deploy:** [Access](https://pb369-projects-myblog.vercel.app/) <br/>
 
 ### 2. [Green Way](https://github.com/PB369/Green-Way)
 📘 **Fast Description:** A currency converter (but simple and elegant). <br/>
