@@ -24,7 +24,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 
 ### 1. [MyBlog](https://github.com/PB369/MyBlog)
 📘 **Fast Description:** A fully functional blog with database and authentication. <br/>
-🛠️ **Technologies:** HTML/CSS, Tailwind <br/>
+🛠️ **Technologies:** React, NodeJS, Express, TypeScript, PostgreSQL, AWS S3, Sass <br/>
 🚀 **Status:** ✅ Finished <br/>
 🔗 **Deploy:** [Access](https://pb369-projects-myblog.vercel.app/) <br/>
 
