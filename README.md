@@ -63,6 +63,6 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 🚀 **Status:** ✅ Finished <br/>
 
 ### 2. [Auto Clicker Speed Test](https://github.com/PB369/AutoClickerSpeedTest)
-📘 **Fast Description:** An automated clicker speed test, capable of achieving at least 15 CPS. <br/>
+📘 **Fast Description:** An automated clicker speed test, capable of reaching up to 15 CPS. <br/>
 🛠️ **Technologies:** Python, Selenium <br/>
 🚀 **Status:** ✅ Finished <br/>
