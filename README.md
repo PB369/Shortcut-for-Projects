@@ -23,7 +23,7 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 ## 💻 Web Projects
 
 ### 1. [MyBlog](https://github.com/PB369/MyBlog)
-📘 **Fast Description:** A fully functional blog with database and authentication. <br/>
+📘 **Fast Description:** A fully functional blog with database and secure authentication. <br/>
 🛠️ **Technologies:** React, NodeJS, Express, TypeScript, PostgreSQL, AWS S3, Sass <br/>
 🚀 **Status:** ✅ Finished <br/>
 🔗 **Deploy:** [Access](https://pb369-projects-myblog.vercel.app/) <br/>
@@ -60,4 +60,9 @@ If you prefer, may consider accessing my projects throw my [portfolio](https://p
 ### 1. [Parking Sensor](https://github.com/PB369/Parking-Sensor)
 📘 **Fast Description:** A parking sensor, just like cars have. This can easily be adapted to be an intrusion alarm. <br/>
 🛠️ **Technologies:** C++ <br/>
+🚀 **Status:** ✅ Finished <br/>
+
+### 2. [Auto Clicker Speed Test](https://github.com/PB369/AutoClickerSpeedTest)
+📘 **Fast Description:** An automated clicker speed test, capable of achieving at least 15 CPS. <br/>
+🛠️ **Technologies:** Python, Selenium <br/>
 🚀 **Status:** ✅ Finished <br/>
